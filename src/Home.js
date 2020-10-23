@@ -12,7 +12,7 @@ function Home() {
                           alt=""/>
 
                 <div className="home__row">
-                    <Product title='Death; An Inside Story: A book for all those who shall die by Sadhguru  ' price={263}
+                    <Product id={1233} title='Death; An Inside Story: A book for all those who shall die by Sadhguru  ' price={263}
                     image="https://images-na.ssl-images-amazon.com/images/I/717jDkVT+xL.jpg"
                      rating={5}
                     />

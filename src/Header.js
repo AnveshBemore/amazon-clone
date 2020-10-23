@@ -2,12 +2,19 @@ import React from 'react';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket"
+import { Link } from 'react-router-dom';
+import { useStateValue } from './StateProvider';
 
 function Header() {
+    const[{basket},dispatch]=useStateValue();
+
     return (
         <div className='header'>
+            <Link to="/">
             <img  className="header__logo"
-            src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"/>
+            src="https://esports.teppenthegame.com/_materials/img/championship/2019/logo_amazon.png"/>
+             
+            </Link>
             <div
             className="header__search">        
             <input
@@ -45,18 +52,16 @@ function Header() {
 
                  </div>
                 
-                <div className="header__optionbasket">
-                    <ShoppingBasketIcon />
-                    <span className="header__optionLineTwo
-                     header__basketCount">0</span>
-                </div>
-
-
-
+                <Link to="/checkout"> 
+                    <div className="header__optionbasket">
+                        <ShoppingBasketIcon />
+                        <span className="header__optionLineTwo
+                        header__basketCount">{basket?.length}
+                        </span>
+                    </div>
+                </Link>
             </div>
-
-
-            </div> 
+    </div> 
     )
 }
 
