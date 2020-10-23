@@ -1,11 +1,12 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBPmtd8h6dpttSFPYdhF3JOxXZEr1UQLcw",
-    authDomain: "farmers-produce.firebaseapp.com",
-    databaseURL: "https://farmers-produce.firebaseio.com",
-    projectId: "farmers-produce",
-    storageBucket: "farmers-produce.appspot.com",
-    messagingSenderId: "765414416706",
-    appId: "1:765414416706:web:55be3669d4155ff5ebe8db",
-    measurementId: "G-J1DQVNJ29Z"
-  };
+  apiKey: "AIzaSyAWNuZcHsuceooaXXsB2Se7P1IqCoCi95M",
+  authDomain: "clone-668a7.firebaseapp.com",
+  databaseURL: "https://clone-668a7.firebaseio.com",
+  projectId: "clone-668a7",
+  storageBucket: "clone-668a7.appspot.com",
+  messagingSenderId: "416062479034",
+  appId: "1:416062479034:web:3487afaa9b1665f1560083",
+  measurementId: "G-V0LM1L0CED"
+};
