@@ -1,12 +1,13 @@
 import React from 'react';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket"
 
 function Header() {
     return (
         <div className='header'>
             <img  className="header__logo"
-            src="https://www.shutterstock.com/image-photo/kiev-ukraine-may-07-2015-amazon-276929006"/>
+            src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"/>
             <div
             className="header__search">        
             <input
@@ -42,8 +43,16 @@ function Header() {
                          prime
                      </span>
 
-                
                  </div>
+                
+                <div className="header__optionbasket">
+                    <ShoppingBasketIcon />
+                    <span className="header__optionLineTwo
+                     header__basketCount">0</span>
+                </div>
+
+
+
             </div>
 
 
