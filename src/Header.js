@@ -4,9 +4,17 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket"
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import {auth} from "./firebase";
 
 function Header() {
-    const[{basket},dispatch]=useStateValue();
+    const[{basket , user },dispatch]=useStateValue();
+
+    const handleAuthentication =() =>{
+        if(user ){
+            auth.signOut();
+        }
+    }
+    {/*4:24:54*/}
 
     return (
         <div className='header'>
@@ -15,22 +23,22 @@ function Header() {
             src="https://esports.teppenthegame.com/_materials/img/championship/2019/logo_amazon.png"/>
              
             </Link>
-            <div
-            className="header__search">        
-            <input
-            className="header__searchInput" type="text"/>
-            <SearchIcon
-            className="header__searchIcon"/>
-            </div>
+                <div
+                className="header__search">        
+                <input
+                className="header__searchInput" type="text"/>
+                <SearchIcon
+                className="header__searchIcon"/>
+                </div>
             
            <div className="header__nav">
-                 <Link to='/login'>
-                    <div className='header__option'>
+                 <Link to={user && '/login'}>
+                    <div onClick={handleAuthentication} className='header__option'>
                         <span className='header__optionLineOne'>
                             Hello Guest
                         </span>
                         <span className='header__optionLineTwo'>
-                            Sign In
+                            {user ? 'Sign Out':'Sign In'}
                         </span>
                     </div>
                  </Link>
